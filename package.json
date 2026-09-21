@@ -1,0 +1,9 @@
+{
+  "name": "tindahan-manager",
+  "version": "1.0.0",
+  "description": "Local sari-sari store inventory and price system for phones on the same Wi-Fi",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=16" },
+  "license": "MIT"
+}
