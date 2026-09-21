@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1F4FD8">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Tindahan">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>Tindahan Manager</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- first-run and problem screens (connect, set up, database not ready) -->
+<div id="gate">
+  <div class="login" id="gateBody"></div>
+</div>
+
+<div id="login" hidden>
+  <div class="login">
+    <span class="tag big">Tindahan</span>
+    <h1>Sign in</h1>
+    <p class="muted" style="margin:0 0 6px">Use the username and password from the store owner.</p>
+    <label class="lbl" for="lu">Username</label>
+    <input class="input" id="lu" autocomplete="username" autocapitalize="none" autocorrect="off" spellcheck="false">
+    <label class="lbl" for="lp">Password</label>
+    <input class="input" id="lp" type="password" autocomplete="current-password">
+    <div class="err" id="lerr" role="alert"></div>
+    <button class="btn primary block" id="lbtn" data-act="login">Sign in</button>
+  </div>
+</div>
+
+<div id="shell" hidden>
+  <div class="app">
+    <header class="top">
+      <div><h1 id="title">Tindahan</h1><small id="sub"></small></div>
+      <button class="who" id="who" data-act="account" aria-label="Account and settings"><span class="dot"></span><span id="whoTxt"></span></button>
+    </header>
+    <main id="main"></main>
+  </div>
+  <button class="fab" id="fab" data-act="addProduct" aria-label="Add product" hidden>
+    <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+  </button>
+  <nav class="nav" aria-label="Main"><div class="nav-in" id="nav"></div></nav>
+</div>
+
+<div class="sheet-wrap" id="sheetWrap" hidden>
+  <div class="scrim" data-act="close"></div>
+  <div class="sheet" role="dialog" aria-modal="true"><div class="grab"></div><div id="sheet"></div></div>
+</div>
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script src="config.js"></script>
+<script src="js/db.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
